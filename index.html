@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trần Lê Minh Huy | Frontend Developer Portfolio</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION & HAMBURGER (Bài 5)
+    ========================== -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                <span class="logo-symbol">&lt;/&gt;</span>
+                <span class="logo-text">MinhHuy<span class="accent-dot">.</span></span>
+            </a>
+
+            <!-- Checkbox dùng để mở menu mobile (Bài 5) -->
+            <input type="checkbox" id="menu-toggle" aria-label="Mở menu điều hướng">
+
+            <!-- Hamburger Button (Bài 5) -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu">
+    <li>
+        <a href="#home" class="menu-link">
+            Trang chủ
+        </a>
+    </li>
+
+    <li>
+        <a href="#about" class="menu-link">
+            Giới thiệu
+        </a>
+    </li>
+
+    <li>
+        <a href="#services" class="menu-link">
+            Dịch vụ
+        </a>
+    </li>
+
+    <li>
+        <a href="#skills" class="menu-link">
+            Kỹ năng
+        </a>
+    </li>
+
+    <li>
+        <a href="#contact" class="menu-link">
+            Liên hệ
+        </a>
+    </li>
+</ul>
+
+            <div class="nav-actions">
+                <button id="theme-btn" class="theme-toggle-btn" onclick="toggleDarkMode()" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ sáng / tối">
+                    <span class="icon-sun">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </span>
+                    <span class="icon-moon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         HERO & TYPING EFFECT (Bài 3)
+    ========================== -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+
+            <div class="status-pill">
+                <span class="status-indicator"></span>
+                <span>Sẵn sàng cho các dự án mới</span>
+            </div>
+
+            <h1 class="hero-title">
+                Xin chào! Tôi là <span class="gradient-text">Trần Lê Minh Huy</span>
+            </h1>
+
+            <!-- Bài 3: Typing Effect -->
+            <div class="typing-container">
+                <div class="typing">Tôi là một Web Developer...</div>
+            </div>
+
+            <p class="hero-desc">
+                Đam mê xây dựng giao diện web mượt mà, tối ưu trải nghiệm người dùng với các kỹ thuật CSS hiện đại và hiệu ứng thị giác tinh tế.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary">
+                    Khám phá hồ sơ
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Liên hệ hợp tác
+                </a>
+                <button class="btn btn-mode" onclick="toggleDarkMode()" title="Đổi chế độ giao diện">
+                    🌙 / ☀️ Chuyển Theme
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+     BÀI 4: PARALLAX - DỊCH VỤ THIẾT KẾ WEB
+========================== -->
+
+<section id="services" class="parallax">
+
+    <div class="parallax-overlay"></div>
+
+    <div class="parallax-content">
+
+        <span class="section-tag">
+            DỊCH VỤ THIẾT KẾ WEBSITE
+        </span>
+
+        <h2>
+            Giải pháp Website chuyên nghiệp
+        </h2>
+
+        <p>
+            Thiết kế website hiện đại, responsive và tối ưu
+            trải nghiệm người dùng bằng những công nghệ web
+            tiên tiến.
+        </p>
+
+        <div class="service-grid">
+
+            <!-- Dịch vụ 1 -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Website doanh nghiệp
+                </h3>
+
+                <p>
+                    Xây dựng website giới thiệu doanh nghiệp,
+                    thương hiệu và sản phẩm chuyên nghiệp.
+                </p>
+
+                <div class="service-price">
+                    Từ 3.000.000đ
+                </div>
+
+                <a href="#contact" class="service-btn">
+                    Xem dịch vụ
+                </a>
+
+            </div>
+
+
+            <!-- Dịch vụ 2 -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Website bán hàng
+                </h3>
+
+                <p>
+                    Thiết kế website thương mại điện tử,
+                    quản lý sản phẩm và đơn hàng.
+                </p>
+
+                <div class="service-price">
+                    Từ 5.000.000đ
+                </div>
+
+                <a href="#contact" class="service-btn">
+                    Xem dịch vụ
+                </a>
+
+            </div>
+
+
+            <!-- Dịch vụ 3 -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Landing Page
+                </h3>
+
+                <p>
+                    Landing Page tối ưu chuyển đổi,
+                    phù hợp quảng cáo và giới thiệu sản phẩm.
+                </p>
+
+                <div class="service-price">
+                    Từ 1.500.000đ
+                </div>
+
+                <a href="#contact" class="service-btn">
+                    Xem dịch vụ
+                </a>
+
+            </div>
+
+
+            <!-- Dịch vụ 4 -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    UI/UX Website
+                </h3>
+
+                <p>
+                    Thiết kế giao diện hiện đại,
+                    tối ưu trải nghiệm trên máy tính và điện thoại.
+                </p>
+
+                <div class="service-price">
+                    Từ 2.500.000đ
+                </div>
+
+                <a href="#contact" class="service-btn">
+                    Xem dịch vụ
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         BÀI 2: CARD FLIP (Thông tin nhân sự)
+    ========================== -->
+    <section id="about" class="section about-section">
+        <div class="section-header">
+            <span class="section-tag">HỒ SƠ CÁ NHÂN</span>
+            <h2>Thông tin nhà phát triển</h2>
+            <p>Tương tác với thẻ bên dưới để khám phá thông tin chi tiết</p>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <!-- Mặt trước -->
+                <div class="flip-card-front">
+                    <div class="card-badge">Developer Card</div>
+                    
+                    <div class="avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-inner">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                    </div>
+
+                    <h3>Trần Lê Minh Huy</h3>
+                    <p class="role-title">Frontend Developer</p>
+
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3 / SCSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="flip-instruction">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        <span>Di chuột để lật thẻ</span>
+                    </div>
+                </div>
+
+                <!-- Mặt sau -->
+                <div class="flip-card-back">
+                    <div class="card-badge back-badge">Kết nối trực tiếp</div>
+
+                    <h3>Thông tin liên hệ</h3>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </span>
+                            <div class="item-text">
+                                <small>Email</small>
+                                <strong>minhhuy@example.com</strong>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </span>
+                            <div class="item-text">
+                                <small>Điện thoại</small>
+                                <strong>0912 345 678</strong>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </span>
+                            <div class="item-text">
+                                <small>Địa điểm</small>
+                                <strong>TP. Hồ Chí Minh, Việt Nam</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="back-action-btn">Gửi lời chào ngay</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         BÀI 6: SKILL BAR
+    ========================== -->
+    <section id="skills" class="section skills-section">
+        <div class="section-header">
+            <span class="section-tag">NĂNG LỰC CHUYÊN MÔN</span>
+            <h2>Kỹ năng công nghệ</h2>
+            <p>Mức độ thành thạo và kinh nghiệm thực hành trong phát triển Web</p>
+        </div>
+
+        <div class="skills-card">
+
+            <div class="skill">
+                <div class="skill-title">
+                    <div class="skill-info">
+                        <span class="skill-dot dot-html"></span>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress html"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title">
+                    <div class="skill-info">
+                        <span class="skill-dot dot-css"></span>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                    <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress css"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title">
+                    <div class="skill-info">
+                        <span class="skill-dot dot-js"></span>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <span class="skill-pct">70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress javascript"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title">
+                    <div class="skill-info">
+                        <span class="skill-dot dot-python"></span>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <span class="skill-pct">65%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress python"></div>
+                </div>
+            </div>
+
+            <div class="skills-footer-chips">
+                <span class="chip">Responsive Web</span>
+                <span class="chip">CSS Grid & Flexbox</span>
+                <span class="chip">CSS Animations</span>
+                <span class="chip">UI/UX Principles</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         BÀI 1: FLOATING ACTION BUTTON
+    ========================== -->
+    <a href="#contact" class="fab" aria-label="Liên hệ nhanh">
+        <svg class="fab-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span class="fab-tooltip">Liên hệ ngay</span>
+    </a>
+
+
+    <!-- =========================
+         CONTACT & FOOTER
+    ========================== -->
+    <section id="contact" class="section contact">
+        <div class="section-header">
+            <span class="section-tag">KẾT NỐI VỚI TÔI</span>
+            <h2>Liên hệ</h2>
+            <p>Cảm ơn bạn đã ghé thăm website! Hãy kết nối để trao đổi thêm về các dự án.</p>
+        </div>
+
+        <div class="contact-grid">
+            <a href="mailto:minhhuy@example.com" class="contact-card">
+                <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <h3>Email</h3>
+                <p>minhhuy@example.com</p>
+                <span class="contact-link-label">Gửi email →</span>
+            </a>
+
+            <a href="tel:0912345678" class="contact-card">
+                <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <h3>Điện thoại</h3>
+                <p>0912 345 678</p>
+                <span class="contact-link-label">Gọi trực tiếp →</span>
+            </a>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h3>Địa chỉ</h3>
+                <p>Hồ Chí Minh, Việt Nam</p>
+                <span class="contact-link-label">Thành phố làm việc</span>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 Trần Lê Minh Huy • Thiết kế với CSS hiện đại & animations mượt mà.</p>
+        </footer>
+    </section>
+
+    <!-- Theme Switch Script (đồng bộ với Dark Mode) -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            try {
+                localStorage.setItem('portfolio_theme', isDark ? 'dark' : 'light');
+            } catch(e) {}
+        }
+
+        (function initTheme() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio_theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.body.classList.add('dark');
+                }
+            } catch(e) {}
+        })();
+    </script>
+</body>
+</html>
